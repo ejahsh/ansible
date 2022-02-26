@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Hello World!
+      debug:
+        msg: "Hello World!"
+
+    - name: display multiple file contents
+      debug: var=item
+      with_file:
+        - "a.txt"
+        - "b.txt"
